@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://db.onlinewebfonts.com/c/bab15956435794e3d48309ddf0700b4c?family=Filson+Soft" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Main Page 5</title>
+</head>
+
+<body>
+   
+        <!-- header  -->
+        <header class='header'>
+            <div class='header_container'>
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href="#"><img src="assets/images/ACIFIN LOGO.svg" alt="logo"></a>
+                    </div>
+                    <div class="menu-toggle" id="menu-toggle" onClick="popupMenu()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <ul class="menu" id="menu">
+                        <div class="menu-toggle" id="menu-toggle" onClick="popupMenu()">
+                            <div class="dark_light_container" style="justify-content: center; align-items: center;">
+                                <img src="assets/images/dark_lighta_img.png" alt="" width="65px"
+                                    style="padding-left: 10px; padding-top: 15px;">
+                            </div>
+                            <div class="bar_container">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                        <li style="text-align: left;">
+                            <a href="index.html">home</a>
+                        </li>
+                        <li>
+                            <a href="talent.html">talent</a>
+                        </li>
+                        <li>
+                            <a href="#skills"><img src="assets/images/ACIFIN LOGO.svg" alt="logo"></a>
+                        </li>
+                        <li>
+                            <a href="merch.html">merch</a>
+                        </li>
+                        <li style="text-align: right;">
+                            <a href="news.html">news</a>
+                        </li>
+                        <li>
+                            <a href="#">START A PROJECT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main_container">
+        <div class="container">
+            <section class="project_wrapper">
+                <div class="project_img_sec">
+                    <img src="assets/images/page5_sec1.png" alt="What Next">
+                </div>
+                <div class="project_txt_sec">
+                    <h2>OUR NEXT PROJECT COULD BE WITH</h2>
+                    <h1>YOU</h1>
+                    <a>START A PROJECT</a>
+                </div>
+            </section>
+            <div class="divider_line" style="margin: 3vw;"></div>
+            <section class="project_caption_wrapper">
+                <div class="project_caption_img">
+                    <img src="assets/images/page5_sec3.png" alt="Project Caption">
+                </div>
+                <div class="project_caption_txt">
+                    <h1>WANNA MAKE COOL SHIT?</h1>
+                </div>
+                <div class="project_discription">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut…</p>
+                </div>
+                <div class="project_btn">
+                    <a href="#">START A PROJECT</a>
+                </div>
+            </section>
+        </div>
+    </main>
+   
+    <!-- footer  -->
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_wrapper">
+                <div class="footer_column_left">
+                    <ul>
+                        <li><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-facebook"></i><i
+                                class="fa-brands fa-twitter"></i></li>
+                        <li><a href="legalpage.html">legal stuff</a></li>
+                        <li><a href="contact.html">contact us</a></li>
+                        <li><a href="talent.html">our talent</a></li>
+                        <li><a href="#">blah blah blah</a></li>
+                    </ul>
+                </div>
+                <div class="footer_column_right">
+                    <div class="footer_heading">
+                        <h2>IT<span style="font-family: Filson Soft;">'</span>S NOT A <span style="display: block;"> MAILING LIST...</span></h2>
+                    </div>
+                    <div class="footer_description">
+                        <p>
+                            IT<span style="font-family: Filson Soft;">'</span> S AN <span style="color: var(--violet);"> EXCLUSIVE</span> LOOK AT OUR LATEST
+                            PROJECTS<span style="display: block;">  HOT OFF THE PRESS</span>
+                        </p>
+                    </div>
+                    <div class="footer_input">
+                        <input type="text" placeholder="EMAIL">
+                    </div>
+                    <div class="footer_logo_container">
+                        <span>2012 <span style="font-family: Filson Soft;"> -</span> 2023&#169; POWERED BY</span>
+                        <div class="footer_logo_text">
+                            <img src="assets/images/ACIFIN LOGO.svg" alt="logo" width="280px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const popupMenu = () => {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        };
+    </script>
+</body>
+
+</html>
