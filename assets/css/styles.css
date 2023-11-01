@@ -1,0 +1,1809 @@
+* {
+    margin: 0px;
+    padding: 0px; 
+}
+
+@font-face {
+    font-family: "ofl-sorts-mill-goudy";
+    src: url('../fonts/ofl-sorts-mill-goudy.italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "filsonsoft-bold";
+    src: url('../fonts/Fontspring-DEMO-filsonsoft-bold.otf') format('opentype');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "filsonsoft-heavy";
+    src: url('../fonts/Fontspring-DEMO-filsonsoft-heavy.otf') format('opentype');
+    font-weight: 900;
+}
+
+:root {
+    --black: #1a1a1a;
+    --white: #ffffff;
+    --violet: #8E41D8;
+}
+
+body {
+    background: #1A1A1A;
+    font-family: 'filsonsoft-heavy';
+}
+
+header {
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+    border-bottom: 4px solid var(--white);
+    padding-top: 28px;
+    padding-bottom: 10px;
+    padding-inline: 40px;
+
+}
+
+header>.header_container>.navbar {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header>.header_container>.navbar>.logo {
+    display: none;
+}
+
+
+header>.header_container>.navbar>.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header>.header_container>.navbar>.menu-toggle>.bar {
+    width: 60px;
+    height: 5px;
+    background-color: var(--violet);
+    margin: 20px 0;
+    border-radius: 2px;
+}
+
+header>.header_container>.navbar>.menu {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+header>.header_container>.navbar>.menu>li {
+    margin-right: 20px;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+header>.header_container>.navbar>.menu>li>a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 900;
+    font-size: 40px;
+    padding-block: 5px;
+    margin-inline: 10px;
+    font-family: 'filsonsoft-bold';
+    display: inline-block;
+}
+
+header>.header_container>.navbar>.menu>li:nth-child(4) {
+    flex-grow: 2;
+}
+
+header>.header_container>.navbar>.menu>li:nth-child(4)>a>img {
+    width: 240px;
+}
+
+header>.header_container>.navbar>.menu>li:nth-child(7) {
+    display: none;
+}
+
+.bottom_bdr {
+    border-bottom: 2px solid var(--blue);
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    animation: smoothScroll 1s forwards;
+}
+
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.dark_light_container {
+    display: none;
+}
+
+/* Media query for responsive design */
+@media (max-width: 991px) {
+    header {
+        padding-inline: 5px;
+        padding-top: 20px;
+    }
+
+    header>.header_container>.navbar {
+        justify-content: space-between;
+        padding-inline: min(10vw, 50px);
+    }
+
+    header>.header_container>.navbar>.logo {
+        display: block;
+    }
+
+    header>.header_container>.navbar>.logo>a {
+        text-decoration: none
+    }
+
+    header>.header_container>.navbar>.logo>a img {
+        width: 90%;
+    }
+
+    header>.header_container>.navbar>.menu {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--black);
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        width: 100%;
+        left: -100%;
+        transform: translateX(-100%);
+        transition: all .8s ease-in-out;
+        box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+        z-index: 2;
+    }
+
+    header>.header_container>.navbar>.menu>.menu-toggle {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header>.header_container>.navbar>.menu>.menu-toggle>div {
+        width: 70px;
+        margin: 20px;
+    }
+
+    header>.header_container>.navbar>.menu>.menu-toggle>div .bar {
+        width: 60px;
+        height: 5px;
+        background-color: var(--violet);
+        margin: 20px 0;
+        border-radius: 2px;
+    }
+
+    header>.header_container>.navbar>.menu>.menu-toggle>div .bar:nth-child(1) {
+        transform: rotate(49deg) translate(20px, 13px);
+    }
+
+    header>.header_container>.navbar>.menu>.menu-toggle>div .bar:nth-child(2) {
+        transform: rotate(133deg) translate(-2px, -1px);
+    }
+
+    header>.header_container>.navbar>.menu>li:nth-child(4) {
+        display: none;
+    }
+
+    header>.header_container>.navbar>.menu>li>a {     
+        font-size: 78px;
+        font-family: 'filsonsoft-heavy';
+    }
+
+    header>.header_container>.navbar>.menu>li:nth-child(7) {
+        display: inline-block;
+    }
+
+    header>.header_container>.navbar>.menu>li:nth-child(7)>a {
+        width: 283px;
+        display: inline-block;
+        background-color: var(--violet);
+        padding-block: 13px;
+        border-radius: 15px;
+        font-size: 39px;
+        letter-spacing: 4px;
+    }
+
+    header>.header_container>.navbar>.menu.active {
+        left: 0px;
+        transform: translateX(0%);
+    }
+
+    header>.header_container>.navbar>.menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header>.header_container>.navbar>.menu-toggle {
+        display: block;
+    }
+
+    .dark_light_container {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 382px) {
+    header>.header_container>.navbar>.logo>a {
+        font-size: 60px;
+    }
+
+    header>.header_container>.navbar>.menu-toggle>.bar {
+        width: 50px;
+        margin: 15px 0;
+        border-radius: 2px;
+    }
+}
+
+.main_merch_sec {
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.cooking_wrapper .container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.main_merch_sec .container .merch_container {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 82px;
+    padding-bottom: 10px;
+}
+
+.main_merch_sec .container .merch_container .merch_img_sec {
+    display: flex;
+    width: 48%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_merch_sec .container .merch_container .merch_img_sec img {
+    width: 100%;
+    border-radius: 24px;
+    border  : 2px solid var(--white);
+}
+
+.main_merch_sec .container .merch_container .merch_intro_sec {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_merch_sec .container .merch_container .merch_intro_sec img {
+    width: 100%;
+}
+.main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h3 {
+    color: #fff;
+    font-family: 'filsonsoft-heavy';
+    font-size: min(6vw, 111px);
+    line-height: min(5vw, 80px);
+    padding-left: min(7vw, 123px);
+}
+.main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h1 {
+    color: #8E41D8;
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'ofl-sorts-mill-goudy';
+    font-size: min(17vw, 310px);
+    line-height: min(9vw, 170px);
+}
+.main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h2 {
+    font-size: min(8vw, 140px);
+    line-height: min(8vw, 150px);
+    text-align: right;
+    color: #fff;
+    font-family: 'filsonsoft-heavy';
+}
+.main_merch_sec .container .merch_container .merch_intro_sec .merch_btn {
+    display: flex;
+    width: 471px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    background: #8E41D8;
+    border: 1px solid #8E41D8;
+    border-radius: 16px;
+    padding: 23px 0px;
+    color: #F5F2EE;
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: 3.57px;
+    font-family: 'filsonsoft-heavy';
+}
+
+.main_merch_sec .merch_poster_sec {
+    width: 100%;
+    padding: 50px 0px 80px;
+    padding-top: 15px;
+}
+
+.main_merch_sec .merch_poster_sec .container img {
+    width: 100%;
+    border-radius: 32px;
+    border: 2px solid #FFFFFF;
+}
+.main_merch_sec .merch_poster_sec .container img:last-child{
+    display: none;
+}
+
+.merch_product_sec {
+    display: flex;
+    max-width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: min(5vw, 50px);
+}
+
+.merch_product_sec .merch_pro_sec_1 {
+    display: flex;
+    max-width: 50%;
+    flex-flow: column wrap;
+    gap: min(3vw, 30px);
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.merch_product_sec .merch_pro_sec_1 h3 {
+    color: #FFFFFF;
+    font-size: 5.8vw;
+    line-height: 6vw;
+    width: 100%;
+    padding-left: 7vw;
+    padding-top: min(3vw, 70px);
+    font-family: 'filsonsoft-heavy';
+}
+
+.merch_product_sec .merch_pro_sec_1 .merch_pro_img_1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.merch_product_sec .merch_pro_sec_1 .merch_pro_img_1 img {
+    width: 100%;
+}
+
+.merch_product_sec .merch_pro_sec_1 .merch_pro_img_2 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: min(1.5vw, 40px);
+}
+
+.merch_product_sec .merch_pro_sec_1 .merch_pro_img_2 img {
+    width: 100%;
+}
+
+.merch_product_sec .merch_pro_sec_2 {
+    display: flex;
+    max-width: 50%;
+    flex-flow: column wrap;
+    gap: min(3.5vw, 65px);
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.merch_product_sec .merch_pro_sec_2 h3 {
+    color: #FFFFFF;
+    font-size: 5.8vw;
+    line-height: 6vw;
+    padding-right: 7vw;
+    font-family: 'filsonsoft-heavy';
+    padding-top: min(3.5vw, 35px);
+    padding-bottom: min(2.5vw, 25px);
+}
+
+.merch_product_sec .merch_pro_sec_2 .merch_pro_img_3 {
+    display: flex;
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+    margin-top: min(3vw, 30px);
+}
+
+.merch_product_sec .merch_pro_sec_2 .merch_pro_img_3 img {
+    width: 90%;
+}
+
+.merch_product_sec .merch_pro_sec_2 .merch_pro_img_4 {
+    display: flex;
+    width: 95%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.merch_product_sec .merch_pro_sec_2 .merch_pro_img_4 img {
+    width: 100%;
+    aspect-ratio: 1/1.2;
+}
+
+.main_merch_sec .dream_txt_sec {
+    width: 100%;
+    padding: 50px 0px;
+}
+
+.main_merch_sec .dream_txt_sec .container h1 {
+    font-family: 'ofl-sorts-mill-goudy';
+    color: #8E41D8;
+    font-size: 12.9vw;
+    font-weight: 400;
+}
+
+.main_merch_sec .dream_txt_sec .container .line {
+    border-bottom: 1px solid #8E41D8;
+    width: 93%;
+    margin: auto;
+}
+
+.main_merch_sec .childish_slider_sec {
+    width: 100%;
+    padding-block: 140px;
+}
+
+.main_merch_sec .childish_slider_sec .container h1 {
+    color: #F5F2EE;
+    font-size: 10vw;
+    line-height: 9.5vw;
+    letter-spacing: 8.32px;
+    font-family: 'filsonsoft-heavy';
+}
+
+.main_merch_sec .product_scrollBar {
+    max-width: 100%;
+    padding: 42px 0px;
+}
+
+.product_scrollBar .container .scrollBar_line {
+    border-bottom: 1px solid #8E41D8;
+    margin: 20px;
+}
+/* project_slider_section  */
+.slider_wrapper {
+    width: 100%;
+    padding: 0px 0px 80px;
+}
+
+.slider_wrapper .container {
+    width: 93%;
+    margin: 0 5vw;
+}
+
+.slider_wrapper .slider_instagram .slider_content {
+    background: #8f41d8a8;
+    border-radius: 14px;
+    padding: 23px;
+    margin-right: 26px;
+    margin-left: 26px;
+    font-family: 'filsonsoft-heavy';
+}
+
+.slider_wrapper .slider_instagram .slider_content .slider_content_header {
+    display: flex;
+    max-width: 100%;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.slider_wrapper .slider_instagram .slider_content .slider_content_header img {
+    width: min(4vw, 72px);
+    height: min(4vw, 73px);
+    padding-left: 10px;
+}
+
+.slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
+    color: #FFFFFF;
+    font-size: min(2vw, 28px);
+    line-height: min(2vw, 33px);
+    width: min(18vw, 310px);
+    letter-spacing: 0px;
+}
+
+.slider_wrapper .slider_instagram .slider_content .slider_content_main {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.slider_wrapper .slider_instagram .slider_content .slider_content_main img {
+    width: 100%;
+}
+
+.slider_wrapper .slider_instagram .slider_content .slider_read_more p {
+    color: #fff;
+    font-size: min(2vw, 24px);
+    line-height: min(2vw, 28px);
+    text-align: right;
+}
+
+.read_more_sec {
+    max-width: 100%;
+    padding: 100px 0px 130px;
+}
+
+.childish_slider_sec {
+    width: 88%;
+    margin: auto;
+    padding: 30px 0px 50px;
+    padding-bottom: min(12vw, 171px);
+}
+
+.childish_slider_sec .container h1 {
+    color: #F5F2EE;
+    font-size: 11vw;
+    line-height: 1;
+    letter-spacing: 8.32px;
+    font-weight: 900;
+    font-family: 'filsonsoft-heavy';
+}
+
+.product_scrollBar {
+    max-width: 100%;
+    padding: 50px 0px;
+}
+
+.product_scrollBar .container .scrollBar_line {
+    width: 93%;
+    border-bottom: 1px solid #8E41D8;
+    margin: 20px;
+    margin-inline: auto;
+}
+
+.read_more_sec {
+    max-width: 100%;
+    padding: 100px 0px 140px;
+}
+
+.read_more_sec .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.read_more_sec .container .merch_btn {
+    display: flex;
+    width: clamp(299px, 37vw, 706px);
+    align-items: center;
+    justify-content: center;
+    background: #8E41D8;
+    border: 1px solid #8E41D8;
+    border-radius: 16px;
+    padding: 34px 0px;
+    letter-spacing: 4.89px;
+    color: #F5F2EE;
+    font-size: min(3vw, 52px);
+    line-height: min(4vw, 63px);
+    font-family: 'filsonsoft-heavy';
+}
+
+section>.slider_container {
+    display: none;
+}
+
+/* Product Slider CSS */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% * 7));
+    }
+}
+
+.slider {
+    background: transparent;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-block: 18px;
+}
+
+.slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: 100%;
+}
+
+.slider .slide {
+    height: 100%;
+    width: 100%;
+}
+
+/* MAIN PAGE 4 CSS */
+.cooking_wrapper {
+    width: 100%;
+    padding: 72px 0px 0px;
+}
+
+.cooking_wrapper .container .cooking_sec {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+}
+
+.cooking_wrapper .container .cooking_sec .cooking_txt_sec {
+    width: 54%;
+}
+
+.cooking_wrapper .container .cooking_sec .cooking_txt_sec img {
+    width: 100%;
+    padding-top: 30px;
+}
+
+.cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3vw;
+    margin-top: 9vw;
+    margin-left: 4vw;
+}
+
+.cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec img {
+    width: 7.74vw;
+    padding-top: 0px;
+}
+
+.cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec button {
+    display: flex;
+    width: min(33vw, 629px);
+    align-items: center;
+    justify-content: center;
+    background: #8E41D8;
+    border: 1px solid #8E41D8;
+    border-radius: 16px;
+    padding: 32px 0px;
+    color: #F5F2EE;
+    font-size: min(3vw, 46px);
+    line-height: min(3vw, 55px);
+    letter-spacing: 4.32px;
+    font-family: 'filsonsoft-heavy';
+}
+
+.cooking_wrapper .container .cooking_sec .cooking_img_sec {
+    width: 44%;
+}
+
+.cooking_wrapper .container .cooking_sec .cooking_img_sec img {
+    width: 95%;
+    border-radius: 24px;
+    border: 2px solid var(--white);
+}
+
+.divider_line {
+    border-bottom: 1px solid #8E41D8;
+    margin: 3vw 7vw;
+}
+
+.cooking_wrapper .container .cooking_posts {
+    display: flex;
+    max-width: 98%;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 75px 0px 18px;
+}
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content {
+    background: #8f41d8a8;
+    border-radius: 14px;
+    padding: 37px;
+    width: 39%;
+    margin-bottom: 37px;
+}
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(5){
+    margin-top: 65px;
+}
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(6){
+    margin-top: 37px;
+}
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(9){
+    margin-top: 37px;
+}
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(10){
+    margin-top: 37px;
+}
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(11){
+    margin-top: 37px;
+}
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(12){
+    margin-top: 37px;
+}
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header {
+    display: flex;
+    max-width: 100%;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header img {
+    width: min(6vw, 111px);
+    height: min(6vw, 113px);
+    padding-left: 10px;
+}
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
+    color: #FFFFFF;
+    font-size: min(3vw, 43px);
+    line-height: min(3vw, 52px);
+    font-family: 'filsonsoft-heavy';
+    width: min(25vw, 454px);
+}
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main {
+    width: 100%;
+}
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main img {
+    width: 100%;
+}
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main p {
+    color: #fff;
+    font-size: min(3vw, 37px);
+    line-height: min(3vw, 44px);
+    text-align: right;
+    margin: 40px 13px 0px;
+    text-transform: uppercase;
+    font-family: 'filsonsoft-heavy';
+}
+.cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings {
+    width: 96%;
+    padding-left: 30px;
+}
+.cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings h2 {
+    font-size: min(7vw, 131px);
+    line-height: min(9vw, 157px);
+    color: #fff;
+    font-family: 'filsonsoft-heavy';
+}
+.cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings h1 {
+    font-size: min(17.5vw, 334px);
+    line-height: min(8vw, 150px);
+    color: #8E41D8;
+    font-family: 'ofl-sorts-mill-goudy';
+    font-style: italic;
+    font-weight: 400;
+    padding-left: 2vw;
+}
+/* Main Page 5 CSS */
+.main_container {
+    max-width: 100%;
+    padding: 50px 0px;
+    padding-bottom: 97px;
+}
+
+.main_container .container .project_wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-block: 20px;
+}
+
+.main_container .container .project_wrapper .project_img_sec {
+    width: 47%;
+}
+
+.main_container .container .project_wrapper .project_img_sec img {
+    width: 100%;
+}
+
+.main_container .container .project_wrapper .project_txt_sec {
+    display: flex;
+    width: 48%;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main_container .container .project_wrapper .project_txt_sec h2 {
+    font-size: 3.75vw;
+    line-height: 4.25vw;
+    color: #fff;
+    font-family: 'filsonsoft-heavy';
+}
+
+.main_container .container .project_wrapper .project_txt_sec h1 {
+    font-size: 19.7vw;
+    line-height: 23.5vw;
+    color: #fff;
+    font-family: 'filsonsoft-heavy';
+}
+
+.main_container .container .project_wrapper .project_txt_sec a {
+    background: #8E41D8;
+    border: 1px solid #8E41D8;
+    border-radius: 16px;
+    color: #F5F2EE;
+    font-size: 2.32vw;
+    line-height: 3.2vw;
+    letter-spacing: 3.14px;
+    padding: 20px 40px;
+    font-family: 'filsonsoft-heavy';
+}
+
+.main_container .container .project_caption_wrapper {
+    display: flex;
+    max-width: 100%;
+    padding: 50px 100px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main_container .container .project_caption_wrapper .project_caption_img {
+    width: 25%;
+}
+
+.main_container .container .project_caption_wrapper .project_caption_img img {
+    width: 100%;
+}
+
+.main_container .container .project_caption_wrapper .project_caption_txt {
+    width: 70%;
+}
+
+.main_container .container .project_caption_wrapper .project_caption_txt h1 {
+    color: #fff;
+    font-size: 7.3vw;
+    line-height: 7vw;
+    font-family: 'filsonsoft-heavy';
+}
+
+.main_container .container .project_caption_wrapper .project_discription {
+    width: 100%;
+    padding: 100px 0px;
+    padding-bottom: 147px;
+}
+
+.main_container .container .project_caption_wrapper .project_discription p {
+    color: #fff;
+    font-size: 2.65vw;
+    line-height: 3.7vw;
+    letter-spacing: 0.99px;
+    font-family: 'filsonsoft-heavy';
+    width: 96%;
+}
+
+.project_btn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project_btn a {
+    background: #8E41D8;
+    color: #fff;
+    border-radius: 16px;
+    text-decoration: none;
+    letter-spacing: 3.57px;
+    font-size: 38px;
+    line-height: 46px;
+    padding: 20px 38px;
+    font-family: 'filsonsoft-heavy';
+}
+
+/* Main Page 2 Css */
+.talent_news_wrapper {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0px;
+}
+
+.talent_news_wrapper .talent_news_sec {
+    background: #8e41d88c;
+    border-radius: 14px;
+    padding: 20px;
+    width: 28%;
+    margin-bottom: 60px;
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_header {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_header .news_header_img {
+    width: 70px;
+    height: 70px;
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_header .news_header_img img {
+    width: 100%;
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption {
+    display: flex;
+    width: 82%;
+    flex-flow: column wrap;
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_icon img {
+    width: 100%;
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details {
+    display: flex;
+    width: 88%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+    font-size: 25px;
+    line-height: 29px;
+    color: #fff;
+    font-family: 'filsonsoft-heavy';
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details img {
+    width: 30px;
+    height: 30px;
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_main {
+    max-width: 100%;
+}
+
+.talent_news_wrapper .talent_news_sec .talent_news_main img {
+    width: 100%;
+}
+
+.talent_news_wrapper .project_btn a {
+    width: 25%;
+    text-align: center;
+}
+
+/* Media Query */
+@media screen and (max-width: 1815px) {
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
+        font-size: min(2.3vw, 43px);
+        width: min(26vw, 454px);
+    }
+    /* Main Page 2 Css */
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 23px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    /* Main Page 5 Css */
+    .main_container .container .project_caption_wrapper .project_caption_txt h1 {
+        font-size: 7.2vw;
+        line-height: 7vw;
+    }
+
+    /* Main Page 2 CSS */
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 21px;
+        line-height: 25px;
+    }  
+    .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec button {
+        font-size: min(2.2vw, 46px);
+        line-height: min(2vw, 55px);
+    }
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
+        font-size: min(1.6vw, 28px);
+        line-height: min(2vw, 33px);
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    /* Main page 5 Css */
+    .main_container .container .project_caption_wrapper .project_caption_txt h1 {
+        font-size: 6.9vw;
+        line-height: 6.7vw;
+    }
+
+    /* Main Page 2 CSS */
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 17px;
+        line-height: 21px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
+        font-size: 1.3vw;
+    }
+
+    /* Main Page 5 Css */
+    .main_container .container .project_caption_wrapper .project_caption_txt h1 {
+        font-size: 6.6vw;
+        line-height: 6.3vw;
+    }
+
+    /* Main Page 2 Css */
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 13.8px;
+        line-height: 17px;
+    }
+
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .main_merch_sec .container .merch_container .merch_intro_sec .merch_btn {
+        font-size: 26px;
+        line-height: 36px;
+        width: 350px;
+    }
+
+    .main_merch_sec .read_more_sec {
+        padding: 100px 0px 60px;
+    }
+
+    /* Main Page Css */
+    .main_container .container .project_caption_wrapper .project_caption_txt h1 {
+        font-size: 6.4vw;
+        line-height: 6vw;
+    }
+
+    /* Main Page 2 CSS */
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .cooking_wrapper .container .cooking_sec .cooking_text_sec .cooking_btn_sec button{
+        font-size: min(2.3vw, 46px);
+        line-height: min(1vw, 40px);
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
+        font-size: 2.3vw;
+        line-height: 3vw;
+        width: min(25vw, 310px);
+    }
+
+    /* Main Page 4 Css */
+    .cooking_wrapper .container .cooking_posts .cooking_post_content {
+        width: 38%;
+        padding: 15px;
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header {
+        gap: 14px;
+    }
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
+        font-size: min(2.2vw, 43px);
+        line-height: min(3vw, 53px);
+        width: min(24vw, 454px);
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header {
+        margin-bottom: 18px;
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main p {
+        font-size: min(3vw, 16px);
+        line-height: min(3vw, 20px);
+        margin: 18px 13px 0px;
+    }
+
+    /* Main Page 5 CSS */
+    .main_container .container .project_caption_wrapper {
+        padding: 50px 30px;
+    }
+
+    .main_container .container .project_caption_wrapper .project_caption_txt h1 {
+        font-size: 7.6vw;
+        line-height: 7.4vw;
+    }
+
+    .main_container .container .project_caption_wrapper .project_discription {
+        padding: 50px 0px;
+    }
+
+    .main_container .container .project_caption_wrapper .project_discription p {
+        width: 100%;
+        text-align: justify;
+    }
+
+    /* Main Page 2 Css */
+    .talent_news_wrapper .talent_news_sec {
+        width: 40%;
+        margin-bottom: 30px;
+    }
+
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+.talent_slider_wrapper .container .slider_instagram_desktop{
+    display: block;
+}
+.talent_slider_wrapper .container .slider_instagram_mobile{
+    display: none;
+}
+@media screen and (max-width:991px) {
+    .talent_slider_wrapper .container .slider_instagram_desktop{
+        display: none;
+    }
+    .talent_slider_wrapper .container .slider_instagram_mobile{
+        display: block;
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(5){
+        margin-top: 0px;
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(6){
+        margin-top: 0px;
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(9){
+        margin-top: 0px;
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(10){
+        margin-top: 0px;
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(11){
+        margin-top: 0px;
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(12){
+        margin-top: 0px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .main_merch_sec .container .merch_container {
+        flex-direction: column-reverse;
+        padding-top: 35px;
+    }
+    .main_merch_sec .merch_poster_sec .container img:last-child{
+        display: block;
+    }
+    .main_merch_sec .merch_poster_sec .container img:first-child{
+        display: none;
+    }
+    .slider_wrapper .slider_instagram .slider_content {      
+        padding: 15px;
+    }
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header{
+        margin-bottom: 18px;        
+    }
+    .slider .slide>img {
+        width: clamp(130px, 25vw, 380px);
+    }
+    .product_scrollBar .container .scrollBar_line1 {
+        display: none;
+    }
+
+    .main_merch_sec .container .merch_container .merch_intro_sec {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    .main_merch_sec .product_scrollBar {    
+        padding: 3px 0px 15px;
+    }
+    .main_merch_sec .dream_txt_sec {
+        padding: 0px 0px 64px;
+    }
+    .main_merch_sec .dream_txt_sec .container .line {
+        padding-bottom: 30px;
+    }
+
+    .main_merch_sec .container .merch_container .merch_img_sec {
+        width: 100%;
+    }
+
+    .mobile_product_scroll_container {
+        display: flex !important;
+    }
+
+    .main_merch_sec .merch_poster_sec {
+        padding: 0px 0px 30px;
+    }
+
+    .main_merch_sec .childish_slider_sec {
+        padding: 0px;
+    }
+    .main_merch_sec .childish_slider_sec .container h1 {
+        font-size: min(12vw, 59px);
+        line-height: min(11vw, 55px);
+        padding-inline: min(5vw, 20px);
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h1 {
+        font-size: min(33vw, 308px);
+        line-height: min(19vw, 170px);
+    }
+    .main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h2 {
+        font-size: min(14vw, 140px);
+        line-height: min(11vw, 115px);
+    }
+    .main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h3 {
+        font-size: min(15vw, 111px);
+        line-height: min(15vw, 100px);
+        padding-left: min(12vw, 137px);
+    }
+    .slider_wrapper {
+        padding: 50px 0px 80px;
+    }
+
+    .main_merch_sec .read_more_sec .container .merch_btn {
+        width: 30vw;
+    }
+
+    .main_merch_sec .read_more_sec {
+        display: none;
+    }
+
+    .cooking_wrapper .container .divider_line {
+        margin: 30px 0vw;
+    }
+
+    /* Main Page 4 Css */
+  
+    .cooking_wrapper .container .cooking_sec{
+        display: none;
+    }
+    .cooking_wrapper .container .mobile_cooking_sec{
+        display:flex !important;
+    }
+    .cooking_wrapper .container .mobile_cooking_sec .cooking_sec{
+        display: flex !important;
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content {
+        width: 80%;
+        padding: 15px;
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header img {
+        width: min(10vw, 111px);
+        height: min(10vw, 113px);
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
+        font-size: min(5.2vw, 43px);
+        line-height: min(6vw, 53px);
+        width: min(60vw, 454px);
+    }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main p {
+        font-size: min(4vw, 25px);
+        line-height: min(4vw, 30px);
+    }
+    .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec button {
+        font-size: min(5vw, 46px);
+        line-height: min(1vw, 55px);
+        width: min(68vw, 629px);
+        padding: min(6vw, 40px) 0px;
+    }
+    .cooking_wrapper .container .mobile_cooking_sec .cooking_sec .cooking_img_sec {
+        width: 85%;
+        margin: auto;
+    }
+    .cooking_wrapper .container .mobile_cooking_sec .cooking_sec .cooking_img_sec  img{
+        padding-top: 0px;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings h2 {
+        font-size: min(12vw, 70px);
+        line-height: min(12vw, 145px);    
+    }
+    .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings h1 {
+        font-size: min(32.3vw, 222px);
+        line-height: min(16vw, 150px);
+    }
+    .cooking_wrapper .container .mobile_cooking_sec .cooking_sec  .cooking_txt_sec {
+        width: 100%;
+    }
+    .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings {
+        width: 100%;
+        padding-left: 5vw;
+        box-sizing: border-box;
+    }
+    .cooking_wrapper {
+        width: 100%;
+        padding: 30px 0px 0px;
+    }
+    .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec img {
+        width: 14.74vw;
+        padding-top: 0px;
+    }
+    .cooking_wrapper .container .cooking_posts {       
+        padding: 4px 0px 18px;
+    }
+    .news_page_btn_section{
+        padding-top: 15px;
+        padding-bottom: 50px;
+    }
+    .news_page_btn_section .container .news_page_btn{
+        padding: 15px 0px;     
+        font-size: min(4vw, 23px);
+    }
+
+    /* Main Page 5 CSS */
+    .main_container .container .project_wrapper{
+        padding: 15px;
+        box-sizing:border-box ;
+    }
+    .main_container .container .project_wrapper .project_img_sec {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .main_container .container .project_wrapper .project_txt_sec {
+        width: 100%;
+    }
+
+    .main_container .container .project_wrapper .project_txt_sec h2 {
+        font-size: 6.75vw;
+        line-height: 7.25vw;
+    }
+
+    .main_container .container .project_wrapper .project_txt_sec h1 {
+        font-size: 36.7vw;
+        line-height: 42.5vw;
+    }
+
+    .main_container .container .project_wrapper .project_txt_sec a {
+        font-size: 4.7vw;
+        line-height: 3vw;   
+        letter-spacing: 1.69px;
+        padding: 18px 16px;
+        font-family: 'filsonsoft-bold';
+    }
+
+    .main_container .container .divider_line {
+        display: none;
+    }
+    .main_container {
+        max-width: 100%;
+        padding: 20px 0px;
+        padding-bottom: 20px;
+    }
+    .main_container .container .project_caption_wrapper {
+        display: none;
+    }
+
+    /* Main Page 2 CSS */
+    .talent_news_wrapper .talent_news_sec {
+        width: 100%;
+    }
+
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_icon {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 4.5vw;
+        line-height: 5vw;
+    }
+
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details img {
+        width: 5vw;
+        height: 5vw;
+    }
+    .slick-dots li.slick-active button:before {
+        color: #dbd6df !important;      
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+    .main_merch_sec .read_more_sec .container .merch_btn {
+        width: 32vw;
+    }
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
+        width: 64vw;
+    }
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header {
+        gap: 10px;
+    }
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header img {
+        width: min(5vw, 72px);
+        height: min(5vw, 73px);
+    }
+}
+@media screen and (max-width: 590px) {
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header img {
+        width: min(8vw, 72px);
+        height: min(8vw, 73px);
+    }
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header {
+        gap: 20px;
+    }
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
+        font-size: min(5.2vw, 30px);
+        line-height: min(6vw, 33px);
+        width: min(62vw, 360px);
+    }
+    .slider_wrapper .slider_instagram .slider_content .slider_content_main {
+        margin-bottom: 18px;
+    }
+    .slider_wrapper .slider_instagram .slider_content .slider_read_more p {
+        font-size: min(4.5vw, 24px);
+        line-height: min(5vw, 28px);
+    }
+}
+@media screen and (max-width: 580px) {
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header img {
+        width: min(10vw, 72px);
+        height: min(10vw, 73px);
+        padding-left: 10px;
+    }
+
+    /* Main Page 2 CSS */
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 4.4vw;
+        line-height: 5vw;
+    }
+    .cooking_wrapper .container .cooking_sec .cooking_txt_sec img {       
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 540px) {  
+    .main_merch_sec .slider_wrapper{
+        padding-bottom: 60px;
+    }
+    .main_merch_sec .container .merch_container .merch_intro_sec .merch_btn {
+        font-size: 18px;
+        line-height: 22px;
+        width: 218px;
+        padding: 10px 0px;
+        margin-top: 30px;
+        letter-spacing: 1.69px;
+    }
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header{
+        gap: 10px;
+    }
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header img {
+        width: 12vw;
+        padding-left: 10px;
+    }    
+    .slick-dots li.slick-active button:before {
+        color: #dbd6df !important;      
+    }
+    .slick-dots li button::before{
+        border-color: #dbd6df;
+        margin-inline: 10px;
+    }
+
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
+        font-size: min(4.2vw, 30px);
+        line-height: min(5vw, 33px);
+        width: min(53vw, 360px);
+        text-transform: uppercase;
+    }
+
+    .slick-dots {
+        width: 92%;
+    }
+
+    .slick-dots li.slick-active button:before {
+        font-size: 25px;
+        line-height: 26px;
+    }
+
+    .slick-dots li button:before {
+        font-size: 19px;
+        line-height: 19px;
+        width: 19px;
+        height: 19px;
+        margin-inline: 10px;
+    }
+
+    .slick-dots li {
+        margin: 0 8px;
+    }
+
+    /* Main Page 4 CSS */
+    .cooking_wrapper .container .cooking_posts .cooking_post_content {
+        width: 83%;
+        padding: 14px;
+        margin: auto;
+        margin-bottom: 16px;
+    }
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
+        font-size: 4.5vw;
+        line-height: 5.6vw;
+        font-family: 'filsonsoft-bold';
+        letter-spacing: .5px;
+        width: 53vw;
+    }
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header {
+        gap: 10px;
+        margin-bottom: 17px;
+    }
+
+    /* Main Page 2 Css */
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 4.2vw;
+        line-height: 4.6vw;
+    }
+
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_img {
+        width: 17vw;
+        height: 17vw;
+    }
+}
+@media screen and (max-width:430px){
+    .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec button {
+        font-size: min(4.5vw, 46px);
+        line-height: min(0vw, 55px);
+    }
+}
+@media screen and (max-width: 400px) {   
+    .slider .slide img {
+        width: 200px;
+    }
+
+    /* Main Page 4 CSS */
+    .cooking_wrapper .container .cooking_posts .cooking_post_content {
+        width: 82%;
+    }
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
+        font-size: 5vw;
+        width: 55vw;
+    }
+
+    /* Main page 5 Css */
+    .main_container .container .project_wrapper .project_txt_sec a {
+        font-size: 4.5vw;
+        line-height: 5vw;
+        padding: 14px;
+    }
+
+    /* Main Page 2 Css */
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 4.2vw;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    /* Main Page 4 Css */
+    .cooking_wrapper .container .cooking_posts .cooking_post_content {
+        width: 79%;
+    }
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
+        font-size: 4.67vw;
+        width: 52vw;
+    }
+
+    /* Main Page 2 CSS */
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 4vw;
+    }
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header {
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main p {   
+    margin: 10px 20px 5px ;
+}
+.slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
+    font-size: min(3.5vw, 30px);
+    line-height: min(5vw, 33px);
+    width: min(45vw, 360px);
+}
+}
+
+@media screen and (max-width: 320px) {  
+    /* Main Page 2 Css */
+    .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
+        font-size: 3.8vw;
+    }
+    .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec button {
+        font-size: min(3.8vw, 46px);
+    }
+}
+/* footer  */
+footer {
+    background-color: #404040;
+}
+
+footer>.footer_container {
+    width: 100%;
+    padding-block: 90px;
+    margin: auto;
+}
+
+footer>.footer_container>.footer_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+footer>.footer_container>.footer_wrapper>.footer_column_left,
+.footer_column_right {
+    flex: 1 1 auto;
+    max-width: 300px;
+    margin: auto;
+}
+
+footer>.footer_container>.footer_wrapper>.footer_column_left>ul>li {
+    list-style: none;
+    text-align: center;
+}
+
+footer>.footer_container>.footer_wrapper>.footer_column_left>ul>li>i {
+    color: #c5c5c5;
+    font-size: 48px;
+    padding-inline: 20px;
+    padding-bottom: 15px;
+}
+
+footer>.footer_container>.footer_wrapper>.footer_column_left>ul>li a {
+    color: #F5F2EE;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-family: 'filsonsoft-heavy';
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: min(90px, 15vw);
+}
+
+footer>.footer_container>.footer_wrapper>.footer_column_right {
+    font-family: 'filsonsoft-bold';
+    color: #F5F2EE;
+    letter-spacing: 3px;
+    text-align: center;
+    /* padding-right: min(20px, 5vw); */
+    max-width: 580px;
+    margin: auto;
+    flex-grow: 2;
+}
+
+footer>.footer_container>.footer_wrapper>.footer_column_right div {
+    margin-block: min(20px, 7vw);
+    font-family: 'filsonsoft-heavy';
+}
+footer>.footer_container>.footer_wrapper>.footer_column_right .footer_logo_text {
+margin-top: min(2vw, 30px);
+}
+footer>.footer_container>.footer_wrapper>.footer_column_right .footer_logo_container {
+margin-top: min(2vw, 40px);
+}
+footer>.footer_container>.footer_wrapper>.footer_column_right .footer_logo_container span{
+    font-size: min(4vw, 22px);
+}
+
+footer>.footer_container>.footer_wrapper>.footer_column_right .footer_heading h2 {
+    font-size: 52px;
+    font-family: 'filsonsoft-heavy';
+    letter-spacing: 5.5px;
+}
+
+footer>.footer_container>.footer_wrapper>.footer_column_right>.footer_description>p {
+    font-size: min(27px, 5vw);
+    font-family: 'filsonsoft-heavy';
+    max-width: 470px;
+    margin: auto;
+    margin-bottom: min(4vw, 35px);
+}
+
+footer>.footer_container>.footer_wrapper>.footer_column_right>.footer_input>input {
+    border: 1px solid var(--violet);
+    background-color: #404040;
+    border-radius: 12px;
+    font-size: 25px;
+    font-family: 'filsonsoft-heavy';
+    padding: 16px 40px;
+    width: 100%;
+    margin-bottom: 40px;
+    letter-spacing: 3.5px;
+    box-sizing: border-box;
+    color: var(--white);
+}
+footer>.footer_container>.footer_wrapper>.footer_column_right>.footer_input>input::placeholder{
+    color: var(--white);
+}
+
+footer>.footer_container>.footer_wrapper>.footer_column_right>.footer_logo_container>.footer_logo_text>h2 {
+    font-size: 74px;
+}
+
+@media screen and (max-width: 991px) {
+    footer>.footer_container>.footer_wrapper>.footer_column_left>ul>li {
+        margin: auto;
+    }
+
+    footer>.footer_container>.footer_wrapper>.footer_column_right>.footer_heading,
+    .footer_description,
+    .footer_input,
+    .footer_input {
+        display: none;
+    }
+
+    footer>.footer_container>.footer_wrapper>.footer_column_left,
+    .footer_column_right {
+        width: 100%;
+        max-width: 95%;
+    }
+
+    footer>.footer_container>.footer_wrapper>.footer_column_right {
+        padding-right: 0px;
+        margin-top: 100px;
+    }
+}
