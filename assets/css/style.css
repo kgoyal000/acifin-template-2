@@ -437,7 +437,7 @@ section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>.int
     background-color: var(--violet);
     padding-block: 18px;
     border-radius: 15px;
-    padding-top: 22px;
+    padding-top: min(3.5vw, 18px);
     font-size: 30px;
     box-shadow: 0px 3px 6px #00000069;
     text-align: center;
@@ -1165,7 +1165,7 @@ section>.merch_container>.merch_btn_container a {
     text-align: center;
     text-decoration: none;
     color: var(--white);
-    padding-top: 39px;
+    padding-top: min(3.5vw, 37px);
     margin-block: 30px;
     letter-spacing: 3px;
     font-family: 'FilsonSoft Heavy';
