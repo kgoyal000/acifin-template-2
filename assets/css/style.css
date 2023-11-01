@@ -27,6 +27,7 @@ body {
     font-family: 'Filson Soft';
     background-color: var(--black);
     color: var(--white);
+    overflow-x: hidden;
 }
 
 /* header  */
