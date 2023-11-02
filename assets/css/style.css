@@ -437,7 +437,7 @@ section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>.int
     background-color: var(--violet);
     padding-block: 18px;
     border-radius: 15px;
-    padding-top: min(5vw, 20px);
+    padding-top: min(5vw, 18px);
     font-size: 30px;
     box-shadow: 0px 3px 6px #00000069;
     text-align: center;
@@ -484,6 +484,7 @@ section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>.int
     section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>.intro_btn_container>a {
         font-size: 18px;
         max-width: 250px;
+        padding-top: min(6vw, 22px);
     }
 
 }
@@ -918,6 +919,7 @@ section>.talent_container>.talent_wrapper>.talent_colomn_right>.talent_img_conta
         max-width: 325px;
         margin-top: 40px;
         margin-bottom: 50px;
+        padding-top: min(5vw, 20px);
     }
 }
 
