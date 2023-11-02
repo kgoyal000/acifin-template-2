@@ -437,7 +437,7 @@ section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>.int
     background-color: var(--violet);
     padding-block: 18px;
     border-radius: 15px;
-    padding-top: min(5vw, 18px);
+    padding-top: min(5vw, 20px);
     font-size: 30px;
     box-shadow: 0px 3px 6px #00000069;
     text-align: center;
