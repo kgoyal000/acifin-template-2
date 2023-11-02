@@ -995,6 +995,7 @@ section>.talent_container>.talent_wrapper>.talent_colomn_right>.talent_img_conta
         margin-top: 40px;
         padding-block: 15px;
         letter-spacing: 3px;
+        padding-top: min(5vw, 20px);
     }
 }
 
