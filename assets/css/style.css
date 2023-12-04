@@ -409,7 +409,7 @@ section .intro_container>.intro_wrapper>.intro_img_container {
 
 section .intro_container>.intro_wrapper>.intro_img_container>.intro_content {
     position: absolute;
-    width: 550px;
+    width: 730px;
     top: 10%;
     left: 3.5%;
     padding-left: 15px;
@@ -427,7 +427,53 @@ section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>h2 {
     font-size: 165px;
     font-family: 'Sorts Mill Goudy';
     font-weight: 400;
+    font-style: italic;
     filter: drop-shadow(0px 3px 8px #0000005F);
+    height: 150px;
+    overflow: hidden;
+    margin-block: 50px;
+}
+section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>h2 div{
+    animation: homepage_intro_scrolltext 8s linear infinite normal;
+}
+@keyframes homepage_intro_scrolltext {
+    0% {
+        transform: translateY(-3%);
+    }
+    19.66%{
+        transform: translateY(-3%);        
+    }
+    24.66%{
+        transform: translateY(-19.33%);
+    }
+    34.66%{
+        transform: translateY(-19.33%);
+    }
+    41.66%{
+        transform: translateY(-36%);
+    }
+    49.66%{
+        transform: translateY(-36%);
+    }
+    56.66%{
+        transform: translateY(-54%);
+    }
+    64.66%{
+        transform: translateY(-54%);
+    }
+    72.66%{
+        transform: translateY(-70%);
+    }
+    82.66%{
+        transform: translateY(-70%);
+    }
+    90.66%{
+        transform: translateY(-87%);
+    }
+    99.99%{
+        transform: translateY(-87%);
+    }
+   
 }
 
 section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>.intro_btn_container>a {
@@ -451,6 +497,15 @@ section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>.int
     section .intro_container {
         padding: 30px
     }
+    section .intro_container>.intro_wrapper>.intro_img_container>.intro_content {
+        text-align: center;
+        padding-left: 0px;
+        width: 100%;
+        top: 8%;
+        left: 0%;
+        right: 0%;
+        padding-top: 15px;
+    }
 }
 
 @media screen and (max-width: 668px) {
@@ -459,7 +514,9 @@ section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>.int
     }
 
     section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>h2 {
-        font-size: clamp(100px, 28vw, 144px);
+        font-size: clamp(30px, 20vw, 144px);
+        height: 100px;
+        margin-block:60px ;
     }
 
     section .intro_container>.intro_wrapper>.intro_img_container>.intro_content {
@@ -515,8 +572,9 @@ section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>.int
     }
 
     section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>h2 {
-        font-size: clamp(90px, 24vw, 110px);
-        line-height: 1.7;
+        font-size: clamp(18px, 19vw, 144px);
+        margin-block: 45px;
+        height: 80px;
     }
 }
 
@@ -534,8 +592,9 @@ section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>.int
     }
 
     section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>h2 {
-        font-size: clamp(60px, 20vw, 80px);
-        line-height: 1.8;
+        font-size: clamp(14px, 18vw, 80px);
+        margin-block: 30px;
+        height: 70px;
     }
 
     section .intro_container>.intro_wrapper>.intro_img_container {
@@ -1042,6 +1101,7 @@ section>.featured_container>.featured_wrapper>.featured_heading h2 {
     font-family: 'Sorts Mill Goudy', serif;
     color: var(--violet);
     font-weight: 500;
+    font-style: italic;
     line-height: clamp(42px, 15vw, 286px);
 }
 
