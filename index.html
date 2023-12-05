@@ -90,11 +90,70 @@
     <section class="epic_section">
         <div class="epic_container">
             <div class="epic_wrapper">
-                <div data-aos="fade-up">
-                    <img src="assets/images/epic.png" alt="epic_img">
-                    <img src="assets/images/epic.png" alt="epic_img">
-                    <img src="assets/images/epic.png" alt="epic_img">
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="/assets/images/epic.png" height="100" width="50" alt=""  class="epic_img"/>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/bump.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/depop.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/domino.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/uni.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/ms.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/images/epic.png" height="100" width="250" alt="" class="epic_img"/>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/bump.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/depop.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/domino.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/uni.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/ms.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/uni.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/ms.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/uni.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/ms.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/uni.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="assets/images/ms.png" height="100" width="250" alt="" />
+                        </div>
+                       
+                    </div>
                 </div>
+                <!-- <div data-aos="fade-up">
+                    <img src="assets/images/epic.png" alt="epic_img">
+                    <img src="assets/images/epic.png" alt="epic_img">
+                    <img src="assets/images/epic.png" alt="epic_img">
+                </div> -->
                 <hr class="hr_tag_border" style="margin-top: min(5vw, 50px);">
             </div>
         </div>
@@ -576,7 +635,7 @@ var tween = TweenMax.fromTo(".featured_talent_img1", 1,
                             
 
 	// build scene
-	var scene = new ScrollMagic.Scene({triggerElement: "#featured_talent", duration: innerWidth<576 ? '50%':'90%', offset:50})
+	var scene = new ScrollMagic.Scene({triggerElement: "#featured_talent",triggerHook: 0.9, duration: innerWidth<576 ? '50%':'90%', offset:50})
 					.setTween(tween)					
 					.addTo(controller);
 var tween = TweenMax.fromTo(".featured_talent_img2", 1,
@@ -585,7 +644,7 @@ var tween = TweenMax.fromTo(".featured_talent_img2", 1,
 							);
 
 	// build scene
-	var scene = new ScrollMagic.Scene({triggerElement: "#featured_talent", duration:innerWidth<576 ? '50%':'90%', offset:50})
+	var scene = new ScrollMagic.Scene({triggerElement: "#featured_talent",triggerHook: 1, duration:innerWidth<576 ? '50%':'90%', offset:50})
 					.setTween(tween)				
 					.addTo(controller);
     </script>

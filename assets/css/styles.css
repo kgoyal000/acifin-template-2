@@ -1,6 +1,6 @@
 * {
     margin: 0px;
-    padding: 0px; 
+    padding: 0px;
 }
 
 @font-face {
@@ -201,7 +201,7 @@ header>.header_container>.navbar>.menu>li:nth-child(7) {
         display: none;
     }
 
-    header>.header_container>.navbar>.menu>li>a {     
+    header>.header_container>.navbar>.menu>li>a {
         font-size: 78px;
         font-family: 'filsonsoft-heavy';
     }
@@ -259,6 +259,7 @@ header>.header_container>.navbar>.menu>li:nth-child(7) {
     width: 90%;
     margin: 0 auto;
 }
+
 .cooking_wrapper .container {
     width: 95%;
     margin: 0 auto;
@@ -284,7 +285,7 @@ header>.header_container>.navbar>.menu>li:nth-child(7) {
 .main_merch_sec .container .merch_container .merch_img_sec img {
     width: 100%;
     border-radius: 24px;
-    border  : 2px solid var(--white);
+    border: 2px solid var(--white);
 }
 
 .main_merch_sec .container .merch_container .merch_intro_sec {
@@ -299,6 +300,7 @@ header>.header_container>.navbar>.menu>li:nth-child(7) {
 .main_merch_sec .container .merch_container .merch_intro_sec img {
     width: 100%;
 }
+
 .main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h3 {
     color: #fff;
     font-family: 'filsonsoft-heavy';
@@ -306,6 +308,7 @@ header>.header_container>.navbar>.menu>li:nth-child(7) {
     line-height: min(5vw, 80px);
     padding-left: min(7vw, 123px);
 }
+
 .main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h1 {
     color: #8E41D8;
     font-weight: 400;
@@ -314,6 +317,7 @@ header>.header_container>.navbar>.menu>li:nth-child(7) {
     font-size: min(17vw, 310px);
     line-height: min(9vw, 170px);
 }
+
 .main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h2 {
     font-size: min(8vw, 140px);
     line-height: min(8vw, 150px);
@@ -321,6 +325,7 @@ header>.header_container>.navbar>.menu>li:nth-child(7) {
     color: #fff;
     font-family: 'filsonsoft-heavy';
 }
+
 .main_merch_sec .container .merch_container .merch_intro_sec .merch_btn {
     display: flex;
     width: 471px;
@@ -349,7 +354,8 @@ header>.header_container>.navbar>.menu>li:nth-child(7) {
     border-radius: 32px;
     border: 2px solid #FFFFFF;
 }
-.main_merch_sec .merch_poster_sec .container img:last-child{
+
+.main_merch_sec .merch_poster_sec .container img:last-child {
     display: none;
 }
 
@@ -486,6 +492,7 @@ header>.header_container>.navbar>.menu>li:nth-child(7) {
     border-bottom: 1px solid #8E41D8;
     margin: 20px;
 }
+
 /* project_slider_section  */
 .slider_wrapper {
     width: 100%;
@@ -725,48 +732,55 @@ section>.slider_container {
     background: #8f41d8a8;
     border-radius: 14px;
     padding: 37px;
-    width: 39%;
+    width: 26%;
     margin-bottom: 37px;
 }
-.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(5){
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(5) {
     margin-top: 65px;
 }
-.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(6){
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(6) {
     margin-top: 37px;
 }
-.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(9){
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(9) {
     margin-top: 37px;
 }
-.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(10){
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(10) {
     margin-top: 37px;
 }
-.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(11){
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(11) {
     margin-top: 37px;
 }
-.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(12){
+
+.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(12) {
     margin-top: 37px;
 }
 
 .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header {
     display: flex;
     max-width: 100%;
-    gap: 30px;
     align-items: center;
     margin-bottom: 40px;
+    /* gap: 20px; */
 }
 
 .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header img {
-    width: min(6vw, 111px);
-    height: min(6vw, 113px);
-    padding-left: 10px;
+    /* width: min(6vw, 111px);
+    height: min(6vw, 111px); */
+    width: min(6vw, 80px);
+    height: min(6vw, 80px);
+    padding-right: 15px;
 }
 
 .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
     color: #FFFFFF;
-    font-size: min(3vw, 43px);
-    line-height: min(3vw, 52px);
+    font-size: min(1.6vw, 33px);
+    line-height: min(3vw, 45px);
     font-family: 'filsonsoft-heavy';
-    width: min(25vw, 454px);
 }
 
 .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main {
@@ -779,23 +793,26 @@ section>.slider_container {
 
 .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main p {
     color: #fff;
-    font-size: min(3vw, 37px);
-    line-height: min(3vw, 44px);
+    font-size: min(3vw, 30px);
+    line-height: min(3vw, 42px);
     text-align: right;
     margin: 40px 13px 0px;
     text-transform: uppercase;
     font-family: 'filsonsoft-heavy';
 }
+
 .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings {
     width: 96%;
     padding-left: 30px;
 }
+
 .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings h2 {
     font-size: min(7vw, 131px);
     line-height: min(9vw, 157px);
     color: #fff;
     font-family: 'filsonsoft-heavy';
 }
+
 .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings h1 {
     font-size: min(17.5vw, 334px);
     line-height: min(8vw, 150px);
@@ -805,6 +822,7 @@ section>.slider_container {
     font-weight: 400;
     padding-left: 2vw;
 }
+
 /* Main Page 5 CSS */
 .main_container {
     max-width: 100%;
@@ -1022,11 +1040,12 @@ section>.slider_container {
 }
 
 /* Media Query */
-@media screen and (max-width: 1815px) {
+@media screen and (max-width:1815px) {
     .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
-        font-size: min(2.3vw, 43px);
-        width: min(26vw, 454px);
+        font-size: min(2.3vw, 26px);
+        line-height: min(3vw, 42px);
     }
+
     /* Main Page 2 Css */
     .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
         font-size: 23px;
@@ -1034,7 +1053,8 @@ section>.slider_container {
     }
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width:1700px) {
+
     /* Main Page 5 Css */
     .main_container .container .project_caption_wrapper .project_caption_txt h1 {
         font-size: 7.2vw;
@@ -1045,18 +1065,23 @@ section>.slider_container {
     .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
         font-size: 21px;
         line-height: 25px;
-    }  
+    }
+
     .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec button {
         font-size: min(2.2vw, 46px);
         line-height: min(2vw, 55px);
     }
+
     .slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
         font-size: min(1.6vw, 28px);
         line-height: min(2vw, 33px);
     }
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width:1560px) {
+    .cooking_wrapper .container .cooking_posts .cooking_post_content {
+        width: 38%;
+    }
     /* Main page 5 Css */
     .main_container .container .project_caption_wrapper .project_caption_txt h1 {
         font-size: 6.9vw;
@@ -1068,9 +1093,15 @@ section>.slider_container {
         font-size: 17px;
         line-height: 21px;
     }
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
+        font-size: min(2.3vw, 36px);
+        line-height: min(3vw, 42px);
+    }
+
+ 
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width:1300px) {
     .slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
         font-size: 1.3vw;
     }
@@ -1098,7 +1129,7 @@ section>.slider_container {
     }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width:1080px) {
     .main_merch_sec .container .merch_container .merch_intro_sec .merch_btn {
         font-size: 26px;
         line-height: 36px;
@@ -1120,13 +1151,14 @@ section>.slider_container {
         font-size: 12px;
         line-height: 16px;
     }
-    .cooking_wrapper .container .cooking_sec .cooking_text_sec .cooking_btn_sec button{
+
+    .cooking_wrapper .container .cooking_sec .cooking_text_sec .cooking_btn_sec button {
         font-size: min(2.3vw, 46px);
         line-height: min(1vw, 40px);
     }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width:990px) {
     .slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
         font-size: 2.3vw;
         line-height: 3vw;
@@ -1134,22 +1166,24 @@ section>.slider_container {
     }
 
     /* Main Page 4 Css */
-    .cooking_wrapper .container .cooking_posts .cooking_post_content {
+    /* .cooking_wrapper .container .cooking_posts .cooking_post_content {
         width: 38%;
         padding: 15px;
     }
     .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header {
         gap: 14px;
-    }
+    } */
 
     .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
         font-size: min(2.2vw, 43px);
         line-height: min(3vw, 53px);
         width: min(24vw, 454px);
     }
+
     .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header {
         margin-bottom: 18px;
     }
+
     .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main p {
         font-size: min(3vw, 16px);
         line-height: min(3vw, 20px);
@@ -1186,35 +1220,45 @@ section>.slider_container {
         line-height: 18px;
     }
 }
-.talent_slider_wrapper .container .slider_instagram_desktop{
+
+.talent_slider_wrapper .container .slider_instagram_desktop {
     display: block;
 }
-.talent_slider_wrapper .container .slider_instagram_mobile{
+
+.talent_slider_wrapper .container .slider_instagram_mobile {
     display: none;
 }
+
 @media screen and (max-width:991px) {
-    .talent_slider_wrapper .container .slider_instagram_desktop{
+    .talent_slider_wrapper .container .slider_instagram_desktop {
         display: none;
     }
-    .talent_slider_wrapper .container .slider_instagram_mobile{
+
+    .talent_slider_wrapper .container .slider_instagram_mobile {
         display: block;
     }
-    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(5){
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(5) {
         margin-top: 0px;
     }
-    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(6){
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(6) {
         margin-top: 0px;
     }
-    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(9){
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(9) {
         margin-top: 0px;
     }
-    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(10){
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(10) {
         margin-top: 0px;
     }
-    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(11){
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(11) {
         margin-top: 0px;
     }
-    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(12){
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(12) {
         margin-top: 0px;
     }
 }
@@ -1225,21 +1269,27 @@ section>.slider_container {
         flex-direction: column-reverse;
         padding-top: 35px;
     }
-    .main_merch_sec .merch_poster_sec .container img:last-child{
+
+    .main_merch_sec .merch_poster_sec .container img:last-child {
         display: block;
     }
-    .main_merch_sec .merch_poster_sec .container img:first-child{
+
+    .main_merch_sec .merch_poster_sec .container img:first-child {
         display: none;
     }
-    .slider_wrapper .slider_instagram .slider_content {      
+
+    .slider_wrapper .slider_instagram .slider_content {
         padding: 15px;
     }
-    .slider_wrapper .slider_instagram .slider_content .slider_content_header{
-        margin-bottom: 18px;        
+
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header {
+        margin-bottom: 18px;
     }
+
     .slider .slide>img {
         width: clamp(130px, 25vw, 380px);
     }
+
     .product_scrollBar .container .scrollBar_line1 {
         display: none;
     }
@@ -1248,12 +1298,15 @@ section>.slider_container {
         width: 100%;
         margin-bottom: 32px;
     }
-    .main_merch_sec .product_scrollBar {    
+
+    .main_merch_sec .product_scrollBar {
         padding: 3px 0px 15px;
     }
+
     .main_merch_sec .dream_txt_sec {
         padding: 0px 0px 64px;
     }
+
     .main_merch_sec .dream_txt_sec .container .line {
         padding-bottom: 30px;
     }
@@ -1273,6 +1326,7 @@ section>.slider_container {
     .main_merch_sec .childish_slider_sec {
         padding: 0px;
     }
+
     .main_merch_sec .childish_slider_sec .container h1 {
         font-size: min(12vw, 59px);
         line-height: min(11vw, 55px);
@@ -1280,19 +1334,23 @@ section>.slider_container {
         width: 100%;
         box-sizing: border-box;
     }
+
     .main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h1 {
         font-size: min(33vw, 308px);
         line-height: min(19vw, 170px);
     }
+
     .main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h2 {
         font-size: min(14vw, 140px);
         line-height: min(11vw, 115px);
     }
+
     .main_merch_sec .container .merch_container .merch_intro_sec .merch_intro_heading h3 {
         font-size: min(15vw, 111px);
         line-height: min(15vw, 100px);
         padding-left: min(12vw, 137px);
     }
+
     .slider_wrapper {
         padding: 50px 0px 80px;
     }
@@ -1310,89 +1368,108 @@ section>.slider_container {
     }
 
     /* Main Page 4 Css */
-  
-    .cooking_wrapper .container .cooking_sec{
+
+    .cooking_wrapper .container .cooking_sec {
         display: none;
     }
-    .cooking_wrapper .container .mobile_cooking_sec{
-        display:flex !important;
-    }
-    .cooking_wrapper .container .mobile_cooking_sec .cooking_sec{
+
+    .cooking_wrapper .container .mobile_cooking_sec {
         display: flex !important;
     }
+
+    .cooking_wrapper .container .mobile_cooking_sec .cooking_sec {
+        display: flex !important;
+    }
+
     .cooking_wrapper .container .cooking_posts .cooking_post_content {
         width: 80%;
         padding: 15px;
     }
+
     .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header img {
         width: min(10vw, 111px);
         height: min(10vw, 113px);
     }
+
     .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
         font-size: min(5.2vw, 43px);
         line-height: min(6vw, 53px);
         width: min(60vw, 454px);
     }
+
     .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main p {
         font-size: min(4vw, 25px);
         line-height: min(4vw, 30px);
     }
+
     .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec button {
         font-size: min(5vw, 46px);
         line-height: min(1vw, 55px);
         width: min(68vw, 629px);
         padding: min(6vw, 40px) 0px;
     }
+
     .cooking_wrapper .container .mobile_cooking_sec .cooking_sec .cooking_img_sec {
         width: 85%;
         margin: auto;
     }
-    .cooking_wrapper .container .mobile_cooking_sec .cooking_sec .cooking_img_sec  img{
+
+    .cooking_wrapper .container .mobile_cooking_sec .cooking_sec .cooking_img_sec img {
         padding-top: 0px;
         width: 100%;
         margin-top: 30px;
     }
+
     .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings h2 {
         font-size: min(12vw, 70px);
-        line-height: min(12vw, 145px);    
+        line-height: min(12vw, 145px);
     }
+
     .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings h1 {
         font-size: min(32.3vw, 222px);
         line-height: min(16vw, 150px);
     }
-    .cooking_wrapper .container .mobile_cooking_sec .cooking_sec  .cooking_txt_sec {
+
+    .cooking_wrapper .container .mobile_cooking_sec .cooking_sec .cooking_txt_sec {
         width: 100%;
     }
+
     .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_txt_headings {
         width: 100%;
         padding-left: 5vw;
         box-sizing: border-box;
     }
+
     .cooking_wrapper {
         width: 100%;
         padding: 30px 0px 0px;
     }
+
     .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec img {
         width: 14.74vw;
         padding-top: 0px;
     }
-    .cooking_wrapper .container .cooking_posts {       
+
+    .cooking_wrapper .container .cooking_posts {
         padding: 4px 0px 18px;
     }
-    .news_page_btn_section{
+
+    .news_page_btn_section {
         padding-top: 15px;
         padding-bottom: 50px;
     }
-    .news_page_btn_section .container .news_page_btn{
-        padding: 15px 0px;     
+
+    .news_page_btn_section .container .news_page_btn {
+        padding: 15px 0px;
         font-size: min(4vw, 23px);
     }
 
     /* Main Page 5 CSS */
-    .main_container .container .project_wrapper{
+    .main_container .container .project_wrapper {
         padding: 15px;
-        box-sizing:border-box ;
+        box-sizing: border-box;
     }
+
     .main_container .container .project_wrapper .project_img_sec {
         width: 100%;
         margin-bottom: 30px;
@@ -1414,7 +1491,7 @@ section>.slider_container {
 
     .main_container .container .project_wrapper .project_txt_sec a {
         font-size: 4.7vw;
-        line-height: 3vw;   
+        line-height: 3vw;
         letter-spacing: 1.69px;
         padding: 18px 16px;
         font-family: 'filsonsoft-bold';
@@ -1423,11 +1500,13 @@ section>.slider_container {
     .main_container .container .divider_line {
         display: none;
     }
+
     .main_container {
         max-width: 100%;
         padding: 20px 0px;
         padding-bottom: 20px;
     }
+
     .main_container .container .project_caption_wrapper {
         display: none;
     }
@@ -1456,10 +1535,11 @@ section>.slider_container {
         width: 5vw;
         height: 5vw;
     }
+
     .slick-dots li.slick-active button:before {
-        color: #dbd6df !important;      
+        color: #dbd6df !important;
     }
-    
+
 }
 
 @media screen and (max-width: 650px) {
@@ -1470,35 +1550,43 @@ section>.slider_container {
     .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header h4 {
         width: 64vw;
     }
+
     .slider_wrapper .slider_instagram .slider_content .slider_content_header {
         gap: 10px;
     }
+
     .slider_wrapper .slider_instagram .slider_content .slider_content_header img {
         width: min(5vw, 72px);
         height: min(5vw, 73px);
     }
 }
+
 @media screen and (max-width: 590px) {
     .slider_wrapper .slider_instagram .slider_content .slider_content_header img {
         width: min(8vw, 72px);
         height: min(8vw, 73px);
     }
+
     .slider_wrapper .slider_instagram .slider_content .slider_content_header {
         gap: 20px;
     }
+
     .slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
         font-size: min(5.2vw, 30px);
         line-height: min(6vw, 33px);
         width: min(62vw, 360px);
     }
+
     .slider_wrapper .slider_instagram .slider_content .slider_content_main {
         margin-bottom: 18px;
     }
+
     .slider_wrapper .slider_instagram .slider_content .slider_read_more p {
         font-size: min(4.5vw, 24px);
         line-height: min(5vw, 28px);
     }
 }
+
 @media screen and (max-width: 580px) {
     .slider_wrapper .slider_instagram .slider_content .slider_content_header img {
         width: min(10vw, 72px);
@@ -1511,15 +1599,17 @@ section>.slider_container {
         font-size: 4.4vw;
         line-height: 5vw;
     }
-    .cooking_wrapper .container .cooking_sec .cooking_txt_sec img {       
+
+    .cooking_wrapper .container .cooking_sec .cooking_txt_sec img {
         padding-top: 0px;
     }
 }
 
-@media screen and (max-width: 540px) {  
-    .main_merch_sec .slider_wrapper{
+@media screen and (max-width: 540px) {
+    .main_merch_sec .slider_wrapper {
         padding-bottom: 60px;
     }
+
     .main_merch_sec .container .merch_container .merch_intro_sec .merch_btn {
         font-size: 18px;
         line-height: 22px;
@@ -1529,17 +1619,21 @@ section>.slider_container {
         letter-spacing: 1.69px;
         padding-top: min(4vw, 20px);
     }
-    .slider_wrapper .slider_instagram .slider_content .slider_content_header{
+
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header {
         gap: 10px;
     }
+
     .slider_wrapper .slider_instagram .slider_content .slider_content_header img {
         width: 12vw;
         padding-left: 10px;
-    }    
-    .slick-dots li.slick-active button:before {
-        color: #dbd6df !important;      
     }
-    .slick-dots li button::before{
+
+    .slick-dots li.slick-active button:before {
+        color: #dbd6df !important;
+    }
+
+    .slick-dots li button::before {
         border-color: #dbd6df;
         margin-inline: 10px;
     }
@@ -1604,13 +1698,15 @@ section>.slider_container {
         height: 17vw;
     }
 }
-@media screen and (max-width:430px){
+
+@media screen and (max-width:430px) {
     .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec button {
         font-size: min(4.5vw, 46px);
         line-height: min(0vw, 55px);
     }
 }
-@media screen and (max-width: 400px) {   
+
+@media screen and (max-width: 400px) {
     .slider .slide img {
         width: 200px;
     }
@@ -1639,6 +1735,7 @@ section>.slider_container {
 }
 
 @media screen and (max-width: 375px) {
+
     /* Main Page 4 Css */
     .cooking_wrapper .container .cooking_posts .cooking_post_content {
         width: 79%;
@@ -1654,29 +1751,34 @@ section>.slider_container {
         font-size: 4vw;
     }
 
-.cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header {
-    gap: 10px;
-    margin-bottom: 10px;
-}
-.cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main p {   
-    margin: 10px 20px 5px ;
-}
-.slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
-    font-size: min(3.5vw, 30px);
-    line-height: min(5vw, 33px);
-    width: min(45vw, 360px);
-}
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_main p {
+        margin: 10px 20px 5px;
+    }
+
+    .slider_wrapper .slider_instagram .slider_content .slider_content_header h4 {
+        font-size: min(3.5vw, 30px);
+        line-height: min(5vw, 33px);
+        width: min(45vw, 360px);
+    }
 }
 
-@media screen and (max-width: 320px) {  
+@media screen and (max-width: 320px) {
+
     /* Main Page 2 Css */
     .talent_news_wrapper .talent_news_sec .talent_news_header .news_header_caption .caption_part_1 .caption_details p {
         font-size: 3.8vw;
     }
+
     .cooking_wrapper .container .cooking_sec .cooking_txt_sec .cooking_btn_sec button {
         font-size: min(3.8vw, 46px);
     }
 }
+
 /* footer  */
 footer {
     background-color: #404040;
@@ -1740,13 +1842,16 @@ footer>.footer_container>.footer_wrapper>.footer_column_right div {
     margin-block: min(20px, 7vw);
     font-family: 'filsonsoft-heavy';
 }
+
 footer>.footer_container>.footer_wrapper>.footer_column_right .footer_logo_text {
-margin-top: min(2vw, 30px);
+    margin-top: min(2vw, 30px);
 }
+
 footer>.footer_container>.footer_wrapper>.footer_column_right .footer_logo_container {
-margin-top: min(2vw, 40px);
+    margin-top: min(2vw, 40px);
 }
-footer>.footer_container>.footer_wrapper>.footer_column_right .footer_logo_container span{
+
+footer>.footer_container>.footer_wrapper>.footer_column_right .footer_logo_container span {
     font-size: min(4vw, 22px);
 }
 
@@ -1777,7 +1882,8 @@ footer>.footer_container>.footer_wrapper>.footer_column_right>.footer_input>inpu
     box-sizing: border-box;
     color: var(--white);
 }
-footer>.footer_container>.footer_wrapper>.footer_column_right>.footer_input>input::placeholder{
+
+footer>.footer_container>.footer_wrapper>.footer_column_right>.footer_input>input::placeholder {
     color: var(--white);
 }
 
