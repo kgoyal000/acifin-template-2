@@ -733,10 +733,10 @@ section>.slider_container {
     border-radius: 14px;
     padding: 37px;
     width: 26%;
-    margin-bottom: 37px;
+    margin-bottom: 56px;
 }
 
-.cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(5) {
+/* .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(5) {
     margin-top: 65px;
 }
 
@@ -758,7 +758,7 @@ section>.slider_container {
 
 .cooking_wrapper .container .cooking_posts .cooking_post_content:nth-child(12) {
     margin-top: 37px;
-}
+} */
 
 .cooking_wrapper .container .cooking_posts .cooking_post_content .cooking_post_header {
     display: flex;
