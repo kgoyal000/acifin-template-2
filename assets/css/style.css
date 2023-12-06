@@ -716,11 +716,11 @@ section>.epic_container>.epic_wrapper .slider .slide .epic_img{
 }
 
 @media screen and (max-width:382px) {
-    section>.epic_container>.epic_wrapper>div img {
+    /* section>.epic_container>.epic_wrapper>div img {
         display: block;
         width: 70px;
         margin-inline: 10px;
-    }
+    } */
 }
 
 
