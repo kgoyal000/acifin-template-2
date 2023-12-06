@@ -257,6 +257,7 @@ p,span{
 }
 .container-contact-pg{
     width: 90%;
+    max-width: 1920px;
     margin: 0 auto;
 }
 .content-wrap{

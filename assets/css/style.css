@@ -388,6 +388,11 @@ footer>.footer_container>.footer_wrapper>.footer_column_right>.footer_logo_conta
         margin-top: 100px;
     }
 }
+.acifin_main_homepage{
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
 
 /* intro_section  */
 section .intro_container {
@@ -1851,6 +1856,11 @@ section>.slider_container {
 }
 
 /* *************talent_page************** */
+.acifin_main_talent{
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
 .talent_intro>.mcn_container {
     width: 92%;
     margin: auto;

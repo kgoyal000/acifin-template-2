@@ -824,8 +824,14 @@ section>.slider_container {
 }
 
 /* Main Page 5 CSS */
+.acifin_main_merch{
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
 .main_container {
-    max-width: 100%;
+    width: 100%;
+    max-width: 1920px;
     padding: 50px 0px;
     padding-bottom: 97px;
 }
@@ -1368,7 +1374,11 @@ section>.slider_container {
     }
 
     /* Main Page 4 Css */
-
+    .acifin_main_news{
+        width: 100%;
+        max-width: 1920px;
+        margin: auto;
+    }
     .cooking_wrapper .container .cooking_sec {
         display: none;
     }
