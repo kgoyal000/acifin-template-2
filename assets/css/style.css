@@ -434,14 +434,15 @@ section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>h2 {
     margin-block: 50px;
 }
 section .intro_container>.intro_wrapper>.intro_img_container>.intro_content>h2 div{
-    animation: homepage_intro_scrolltext 8s linear infinite normal;
+    animation: homepage_intro_scrolltext 8s linear 1s infinite normal;
+    transform: translateY(-3.5%);
 }
 @keyframes homepage_intro_scrolltext {
     0% {
-        transform: translateY(-3%);
+        transform: translateY(-3.5%);
     }
     19.66%{
-        transform: translateY(-3%);        
+        transform: translateY(-3.5%);        
     }
     24.66%{
         transform: translateY(-19.33%);
