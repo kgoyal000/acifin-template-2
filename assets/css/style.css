@@ -914,7 +914,7 @@ section > .epic_container > .epic_wrapper .slider .slide .epic_img {
   white-space: nowrap;
   animation: bannermove 7s linear infinite;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   display: flex;
 }
 
