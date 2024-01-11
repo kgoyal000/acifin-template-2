@@ -904,6 +904,7 @@ section > .epic_container > .epic_wrapper .slider .slide .epic_img {
   height: 350px;
   position: relative;
   overflow: hidden;
+  width: 100vw !important
 }
 
 .marquee {
