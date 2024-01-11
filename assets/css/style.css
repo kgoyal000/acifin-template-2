@@ -537,31 +537,31 @@ section
     transform: translateY(-112%);
   }
   20% {
-    transform: translateY(-105%);
+    transform: translateY(-112%);
   }
   30% {
     transform: translateY(-212%);
   }
   40% {
-    transform: translateY(-205%);
+    transform: translateY(-212%);
   }
   50% {
     transform: translateY(-312%);
   }
   60% {
-    transform: translateY(-305%);
+    transform: translateY(-312%);
   }
   70% {
     transform: translateY(-412%);
   }
   80% {
-    transform: translateY(-405%);
+    transform: translateY(-412%);
   }
   90% {
     transform: translateY(-512%);
   }
   100% {
-    transform: translateY(-505%);
+    transform: translateY(-512%);
   }
 }
 
