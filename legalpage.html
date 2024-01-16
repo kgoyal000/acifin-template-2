@@ -181,12 +181,18 @@
       // Function to handle successful camera access
       function handleSuccess(stream) {
           videoElement.srcObject = stream;
+          videoElement.setAttribute('playsinline', ''); // Important for iOS Safari
+          videoElement.muted = true; // Mute the video to allow autoplay on Safari
+          videoElement.onloadedmetadata = function() {
+              videoElement.play().catch(e => console.log('Error auto playing the video:', e));
+          };
           videoElement.style.display = 'block';
           fallbackImage.style.display = 'none';
       }
   
       // Function to handle camera access error
-      function handleError() {
+      function handleError(error) {
+          console.log('Navigator.MediaDevices.getUserMedia error: ', error.message, error.name);
           videoElement.style.display = 'none';
           fallbackImage.style.display = 'block';
       }
