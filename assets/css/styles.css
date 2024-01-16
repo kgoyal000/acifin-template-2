@@ -923,6 +923,7 @@ section > .slider_container {
 
 .main_container .container .project_wrapper .project_img_sec img, .main_container .container .project_wrapper .project_img_sec video {
   width: 100%;
+  border-radius: 10px;
 }
 
 .main_container .container .project_wrapper .project_txt_sec {
