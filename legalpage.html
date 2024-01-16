@@ -90,6 +90,7 @@
         <div class="divider_line" style="margin: 3vw"></div>
         <section class="project_caption_wrapper">
           <div class="project_caption_img">
+            <video id="cameraFeed" autoplay></video>
             <img src="assets/images/page5_sec3.png" alt="Project Caption" />
           </div>
           <div class="project_caption_txt">
@@ -172,6 +173,29 @@
         const menu = document.getElementById("menu");
         menu.classList.toggle("active");
       };
+
+      document.addEventListener('DOMContentLoaded', function() {
+      const videoElement = document.querySelector('#cameraFeed');
+      const fallbackImage = document.querySelector('.project_img_sec img');
+  
+      // Function to handle successful camera access
+      function handleSuccess(stream) {
+          videoElement.srcObject = stream;
+          videoElement.style.display = 'block';
+          fallbackImage.style.display = 'none';
+      }
+  
+      // Function to handle camera access error
+      function handleError() {
+          videoElement.style.display = 'none';
+          fallbackImage.style.display = 'block';
+      }
+  
+      // Request access to the front camera
+      navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } })
+          .then(handleSuccess)
+          .catch(handleError);
+      });
     </script>
   </body>
 </html>
