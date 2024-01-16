@@ -921,7 +921,7 @@ section > .slider_container {
   width: 47%;
 }
 
-.main_container .container .project_wrapper .project_img_sec img {
+.main_container .container .project_wrapper .project_img_sec img, .main_container .container .project_wrapper .project_img_sec video {
   width: 100%;
 }
 
